@@ -5,5 +5,4 @@ echo "<br/><br/><br/>";
 echo "The reverse of the input string is : ";
 echo strrev($_GET['input']);
   
-
 ?>
