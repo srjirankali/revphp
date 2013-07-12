@@ -10,4 +10,6 @@ echo strrev($_GET['input']);
   
   
   
+  
+  
 ?>
