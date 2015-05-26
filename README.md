@@ -13,5 +13,3 @@ My New 3
 Sampel Commit Test
 
 New Test  
-
-dsds    
