@@ -9,6 +9,7 @@ Commit 3c
 My new1x
 Test
 My new 2  
+d
 My New 3  
 Sampel Commit Test
 New Commit
