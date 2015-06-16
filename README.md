@@ -12,8 +12,6 @@ My new 2
 d
 My New 3  
 Sampel Commit Test
-New Commit
-
 New Test  d
 Sample
 New Commit
