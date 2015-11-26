@@ -1,6 +1,6 @@
-web2:
+web3:
   build: .
   volumes:
    - .:/code
-redis2:
+redis3:
   image: ubuntu
