@@ -1,6 +1,10 @@
-web44:
+web:
   build: .
   ports:
-   - "2780:80"
-redis44:
-  image: ubuntu
+   - "5000:5000"
+  volumes:
+   - .:/code
+  links:
+   - redis
+redis:
+  image: redis
