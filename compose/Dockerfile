@@ -1,5 +1,5 @@
 # A basic apache server. To use either add or bind mount content under /var/www
-FROM ubuntu:12.04
+FROM ubuntu
 
 MAINTAINER A A
 
@@ -9,8 +9,8 @@ ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 
-COPY ../index.html /var/www/
-COPY ../img /var/www/img
+COPY ./index.html /var/www/
+
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
