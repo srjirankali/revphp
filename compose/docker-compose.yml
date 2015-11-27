@@ -1,7 +1,7 @@
 dockcomposeweb:
   build: .
   ports:
-   - "5050:5000"
+   - "5000:5000"
   volumes:
    - .:/code
   links:
