@@ -1,6 +1,4 @@
 web29:
   build: .
-  volumes:
-   - .:/code
 redis29:
   image: ubuntu
