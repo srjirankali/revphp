@@ -5,6 +5,6 @@ dockcompose-web:
   volumes:
    - .:/code
   links:
-   - dockcomposeredis
+   - dockcompose-redis
 dockcompose-redis:
   image: redis
