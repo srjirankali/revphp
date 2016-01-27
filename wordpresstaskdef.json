@@ -5,7 +5,7 @@
       "links": [
         "mysql"
       ],
-      "image": "wordpress",
+      "image": "wordpress1",
       "essential": true,
       "portMappings": [
         {
@@ -24,7 +24,7 @@
         }
       ],
       "name": "db",
-      "image": "mysql",
+      "image": "mysql1",
       "cpu": 10,
       "memory": 500,
       "essential": true
