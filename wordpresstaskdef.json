@@ -23,7 +23,7 @@
           "value": "password"
         }
       ],
-      "name": "db",
+      "name": "mysql",
       "image": "mysql1",
       "cpu": 10,
       "memory": 500,
