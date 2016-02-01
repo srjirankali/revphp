@@ -4,9 +4,9 @@
     {
       "name": "web",
       "links": [
-        "mysql"
+        "redis"
       ],
-      "image": "wordpress1",
+      "image": "web",
       "essential": true,
       "portMappings": [
         {
@@ -18,14 +18,8 @@
       "cpu": 10
     },
     {
-      "environment": [
-        {
-          "name": "MYSQL_ROOT_PASSWORD",
-          "value": "password"
-        }
-      ],
-      "name": "mysql",
-      "image": "mysql1",
+      "name": "redis",
+      "image": "redis",
       "cpu": 10,
       "memory": 200,
       "essential": true
