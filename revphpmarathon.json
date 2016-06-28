@@ -15,11 +15,11 @@
       "instances": 1
     },
     {
-      "id": "wordpress",
+      "id": "web",
       "container": {
         "type": "DOCKER",
         "docker": {
-          "image": "wordpress",
+          "image": "gcr.io/cloudmunch-1333/d_rosmi-revphp-rosmi-kubernetes-master-3:latest",
           "network": "BRIDGE",
           "portMappings": [{
             "containerPort": 80,
@@ -28,13 +28,7 @@
           }]
         }
       },
-      "env": {
-        "SERVICE_NAME": "wordpress",
-        "WORDPRESS_DB_HOST": "wordpress.mysql.service.consul:3306",
-        "WORDPRESS_DB_USER": "wordpress",
-        "WORDPRESS_DB_PASSWORD": "wordpress",
-        "WORDPRESS_DB_NAME": "wordpress"
-      },
+      
       "cpus": 1,
       "mem": 256.0,
       "instances": 1,
@@ -46,8 +40,7 @@
         "intervalSeconds": 10,
         "timeoutSeconds": 20,
         "maxConsecutiveFailures": 3
-      }],
-      "dependencies": ["/wordpress/mysql"]
+      }]
     }
   ]
 }
@@ -56,57 +49,3 @@
 
 
 
-
-
-
-
-
-
-
-{
-  "id": "revphp",
-  "cpus": 0.2,
-  "mem": 20.0,
-  "instances": 2,
-  "constraints": [["hostname", "UNIQUE", ""]],
-  "container": {
-    "type": "DOCKER",
-    "docker": {
-      "image": "outyet",
-      "network": "BRIDGE",
-      "portMappings": [
-        { "containerPort": 8080, "hostPort": 0, "servicePort": 0, "protocol": "tcp" }
-      ]
-    }
-  },
-  "healthChecks": [
-    {
-      "protocol": "HTTP",
-      "portIndex": 0,
-      "path": "/",
-      "gracePeriodSeconds": 5,
-      "intervalSeconds": 20,
-      "maxConsecutiveFailures": 3
-    }
-  ]
-}
-
-
-
-
-{
-      "name": "web",
-      "links": [
-        "redis"
-      ],
-      "image": "web",
-      "essential": true,
-      "portMappings": [
-        {
-          "containerPort": 80,
-          "hostPort": 80
-        }
-      ],
-      "memory": 300,
-      "cpu": 10
-    }
