@@ -1,0 +1,40 @@
+{
+  "id": "revphp",
+  "apps": [
+    {
+"args": null, 
+      "id": "redis",
+      "container": {
+        "type": "DOCKER",
+        "docker": {
+          "image": "redis",
+          "network": "BRIDGE"
+        }
+      },
+      "cpus": 1,
+      "mem": 200.0,
+      "instances": 1
+    },
+    {
+"args": null, 
+      "id": "web",
+      "container": {
+        "type": "DOCKER",
+        "docker": {
+          "image": "gcr.io/cloudmunch-1333/d_rosmi-revphp-rosmi-kubernetes-master-3:latest",
+          "network": "BRIDGE",
+          "portMappings": [{
+            "containerPort": 80,
+            "hostPort": 31457,
+            "protocol": "tcp"
+          }]
+        }
+      },
+      
+      "cpus": 1,
+      "mem": 256.0,
+      "instances": 1
+      
+    }
+  ]
+}
