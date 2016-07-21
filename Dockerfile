@@ -4,6 +4,7 @@ FROM ubuntu
 MAINTAINER A A
 
 RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /var/lock/apache2
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
