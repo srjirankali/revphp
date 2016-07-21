@@ -11,8 +11,8 @@ ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 ENV APACHE_LOCK_DIR /var/lock/apache2$SUFFIX
 
-COPY ./index.html /var/www/
-COPY ./img /var/www/img
+COPY ./index.html /var/www/html
+COPY ./img /var/www/html/img
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
