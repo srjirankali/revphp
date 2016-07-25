@@ -35,7 +35,7 @@
       "mem": 256.0,
       "instances": 1,
       "uris":  [
-     "file:///root/file.tar"
+     "file:///root/docker.tar.gz"
  ]
    
       
